@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical examples</title>
+  </head>
+  <style>
+    #users {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: antiquewhite;
+    }
+
+    .user {
+      min-width: 200px;
+      background-color: bisque;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <div id="users">
+      <div class="user">User 1</div>
+      <div class="user">User 2</div>
+      <div class="user">User 3</div>
+    </div>
+    <script>
+      let users = [
+        {
+          firstName: "Damilola",
+          lastName: "Oyedumade",
+          profileImage: "../",
+        },
+        {
+          firstName: "Leo",
+          lastName: "Ogbaje",
+          profileImage: "",
+        },
+        {
+          firstName: "Henry",
+          lastName: "Ilozumba",
+          profileImage: "",
+        },
+      ];
+      
+
+      let usersContainer = document.getElementById("users");
+      let userBox = '';
+      users.forEach(user  =>  {
+        userBox += ` <div class="user">    
+            ${user.firstName} ${user.lastName} <img src="${user.profileImage}"
+            </div>`;
+        usersContainer.innerHTML = userBox
+      });
+    </script>
+  </body>
+</html>

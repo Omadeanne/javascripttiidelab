@@ -1,0 +1,123 @@
+<!-- datatypes
+number: numeric, negative float values to positive,
+negative infinity to positive (special numbers)
+eg 822222.23
+
+string:textual literal values, alphanumeric 
+
+boolean:True or False
+
+
+Null: is defined but empty
+let age1 = null;
+console.log(age1)  //null
+
+Undefined: declared but no value is assigned to it
+let age;
+console.log(age)  //undefined
+
+Object:
+eg syntax : 
+{ key : value }
+eg let shams ={
+    name = "Sandra" name is the key, sandra is value
+    age = 29
+    nationality = Nigerian
+}
+
+Arrays => [1,2,3,5]
+[ "kenny", "shams" , 1, 2] 
+
+BingInt: numbers that can be operated beyond the safe number of js 
+console.log(Number.MAX_SAFE_INTEGER)  
+
+Symbol
+
+Unary operator : +, - eg + 4 
+binary eg 5 + 8
+
+
+arithmetic operators : + , - , % , /
+
+logical operators :
+AND &&
+OR  ||
+NOT !
+
+Comparison operators: used to compare two numbers
+greater than >
+less than <
+less or equal <=
+equal ==
+exactly equal ===
+
+assignment operator : =
+-->
+
+
+
+<script>
+    //Comparison operators  
+    let num1 = 8;
+    let num2 = 18;
+
+ console.log(num1 > num2); //false
+ console.log(num1 < num2); //true
+
+ let temperature = 22;
+ let freezingTemperature = 0;
+ console.log(temperature >= freezingTemperature); //true
+ console.log(temperature <= freezingTemperature); //false
+
+//logical operators
+// AND &&
+
+let isSunny = true;
+let isWarm = true;
+console.log (isSunnyAndWarm = isSunny && isWarm); //true
+
+
+//NOT !
+let hasBurger = true;
+let hasPizza = false;
+let isHungry = hasPizza || hasBurger;  //true
+
+//NOT !
+let hasMoney = false;
+let isBroke = !hasMoney;  //true
+
+
+    let age1 = "50";
+    let age2 = 50;
+    
+    console.log (age1 == age2); //true
+    console.log(age1 === age2); //false
+
+    
+    let fellow = {           //object
+    name:"Ejiba Sandra",
+    age : "29" ,
+    gender : "Male",
+    // action : doing(), 
+    children:["Saida" , "Musa"] ,
+    isMale: true
+}
+
+let name = "sandra"
+let age = "45"
+
+let exp = `The persons name is ${name}, he is ${age} years old`;
+let pattern = prompt( "Please what's your name?" );
+let exp2 = "The persons name is " + name + " she is " + age + " years old"   // concatenation
+let exp3 = `The persons name is ${name} she is ${age} years old`    //string literals
+
+console.log(exp2)
+console.log(exp3)
+console.log(fellow.age)
+
+
+let userId1 = Symbol("uniqueid")
+let userId2= Symbol("uniqueid")
+
+</script>
+

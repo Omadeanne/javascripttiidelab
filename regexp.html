@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+
+    <script>
+        /* Exercise
+take input from user and replace email with ...
+*/
+let input = (prompt("What is your Email?"))
+if(typeof input == "string"){
+    input.replace("string", "....")
+}
+else{
+    alert("Input correct Email")
+}
+
+
+// Ask the user for input using a prompt
+const userInput = prompt("Enter your Email");
+
+// Check if the user entered anything
+if (userInput !== null) {
+  // Replace the input with "..." (You can replace any specific characters you want)
+  const replacedText = userInput.replace(/./g, '...'); // Replace all characters with "..."
+  
+  // Display the replaced text
+  alert("Replaced text: " + replacedText);
+} else {
+  alert("You didn't enter any text.");
+}
+ 
+
+
+
+
+
+
+
+
+/* synthax
+pattern what youre finding
+modifier how you want it found
+
+let rx = /pattern/modifier
+let rx = new regExp(/pattern/modifier)
+*/
+/*  
+Modifier
+i = case insensitivity
+g = global match
+m = multiline match
+
+
+Methods
+1. Search() returns the first index of  the first match irrespective of global search
+2. match()
+3. test()
+4. exec()
+5.matchAll()
+6. replace()
+7. replaceAll()
+8. Split()
+
+*/
+
+//SEARCH()
+/*  synthax : text.search(pattern)*/ 
+let text = "My God is a good God"
+let result = text.search(/God/ig)
+console.log(result);
+
+
+//match()
+/*  synthax : text.matchpattern)*/ 
+let text2 = "My God is a good God,there is no god but God "
+let result2 = text2.match(/God/ig)
+console.log(result2);
+
+//exec()
+/*  synthax : text.search(pattern)*/ 
+let text3 = "My God is a good God"
+let result3 = text.exec(/God/ig)
+console.log(result3);
+
+
+ 
+/* test()
+ synthax : pattern.test(text)*/ 
+let text4 = "My God is a good God"
+let result4 = /God/.test(text4)
+console.log(result4);
+
+//replace()
+/*  synthax : text.replace("old" 'new')*/ 
+let text5 = "My God is a good God"
+let result5 = text3.replace(/God/g, "Creator")
+console.log(result5);
+
+/* Exercise
+take input from user and replace email with ...
+*/
+
+    </script>
+</body>
+</html>

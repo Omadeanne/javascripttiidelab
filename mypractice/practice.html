@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fuctions practice</title>
+  </head>
+  <body>
+    <script>
+      // function reverseNumber(n){
+      //     //convert number to string
+      //  n = n + ""; //str = num.toString() or str = String(num) co
+      //  return n.split("").reverse().join("");
+      // }
+      // console.log (Number( reverseNumber(32243)));
+
+
+       
+
+    //   function checksPalindrome(str) {
+    //     const len = str.lenght;
+    //     for (let i = 0; i < len / 2; i++) {
+    //       if (str[i] !== str[len - 1 - i]) 
+    //       {
+    //         return false;
+    //       }
+    //     }
+    //     return true;
+    //   }
+    //   const str1 = 'madam';
+    //   const str2 = 'nursesrun';
+    //   const str3 = 'hope';
+    //   console.log(checksPalindrome(str1));
+    //   console.log(checksPalindrome(str2));
+    //   console.log(checksPalindrome(str3));
+
+
+
+//write a function that generates allthe combinations of  a string
+    function subString(str){
+        const result = [];
+
+        function searchCombination(start,curr){
+            if (curr.lenght > 0 ){
+                result.push(curr);
+            }
+            for (let i = start; i < str.lenght; i++){
+                searchCombination(i + 1, curr + str[i]);
+            }
+        }
+        searchCombination(0, '');
+        return result;
+    }
+    const str = 'dog';
+    const result = subString(str);
+    console.log(result);
+    </script>
+  </body>
+</html>

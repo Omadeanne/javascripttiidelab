@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+1. Function definition/expression
+2. Function Declaration
+3. Arrow Function
+
+1. Function definition/expression: a function is like an activity
+parameterless function can apply to the 3 types
+
+let functionName = function() {
+    action
+}
+call
+//Functions with parameters
+let functionName = function(param1,param2){
+
+}
+*/
+
+      //parameterless function
+      // let sayHello = function()  //defining
+      // {
+      //     alert("Hello, how are you?")
+      // }
+      // sayHello()  //call
+
+      //Functions with parameters
+    //   let sayHello = function (name) {
+    //     alert(`Hello, how are you ${name}`);
+    //   };
+    //   // sayHello("Kenny")
+    //   // sayHello("Sandra")
+    //   // sayHello("Simi")
+    //   sayHello(prompt("What's your name?"));
+
+      let makeTableOf = function (number) {
+        let y = 1;
+        while (y <= 12) {
+
+          r = y * number;
+          console.log(`${number} x ${y} = ${r}`);
+          y++;
+        }
+      };
+      makeTableOf(7)
+      makeTableOf(12)
+      makeTableOf(8)
+
+
+    //   OR
+     
+    let makeTableFor = function (number,start,end) {
+        let y = start;
+        while (y <= end) {
+
+          r = y * number;
+          console.log(`${number} x ${y} = ${r}`);
+          y++;
+        }
+      };
+      makeTableFor(7,10,30)
+// function definition cannot be called anywhere else but at the end 
+
+
+// 2. function declaration can be called anywhere
+
+/* function functionName(){
+    //action
+}
+ 
+function functionName(param1,param2){
+    //action
+}
+ 
+ function greet(name){
+    alert(`good morning ${name}`)
+
+     
+ }
+ greet("Sandra")
+
+
+ 4. arrow function is similar to function definition
+ except it is more concise
+
+ let functionName = () => {
+
+ }
+
+let functionName = (param1,param2) => {
+ 
+}
+ */
+
+ function findSquareOfNumber(findSquareOfNumber){
+//action
+return number * number
+ }
+console.log(findSquareOfNumber(5))
+// alert (findSquareOfNumber(5)) 
+let result =findSquareOf(8)
+ 
+ </script>
+  </body>
+</html>

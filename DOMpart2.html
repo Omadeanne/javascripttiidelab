@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document object model</title>
+    <style>
+      .blueTheme {
+        background-color: blue;
+        color: white;
+        width: 800px;
+        margin: auto;
+      }
+
+      .redTheme {
+        background-color: red;
+        color: white;
+        width: 800px;
+        margin: auto;
+      }
+      .input {
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Inventory items</h1>
+
+    <form name="inventoryForm" onsubmit="addItem(event)">
+      <input
+        type="text"
+        name="itemName"
+        id="itemName"
+        placeholder="Item name"
+      />
+      <br />
+      <input
+        type="text"
+        name="itemDescription"
+        id="itemDescription"
+        placeholder="Description"
+      />
+      <br />
+      <input
+        type="number"
+        name="itemAmount"
+        id="itemAmount"
+        placeholder="Amount"
+      />
+      <br />
+      <input
+        type="text"
+        name="itemQuantity"
+        id="itemQuantity"
+        placeholder="Quantity"
+      />
+      <br />
+
+      <input type="submit" />
+    </form>
+
+    <select id="themes">
+      <option>Select Theme</option>
+      <option>Blue</option>
+      <option>Red</option>
+    </select>
+
+    <button onclick="applyTheme()">Change Theme</button>
+
+    <table id="Inventory">
+      <thead>
+        <th>Item name</th>
+        <th>Description</th>
+        <th>Amount</th>
+        <th>Quantity</th>
+      </thead>
+    </table>
+
+    <script>
+      var inventoryItems = document.getElementById("Inventory");
+
+      function addItem(e) {
+        e.preventDefault();
+        let inventoryForm = document.forms["inventoryForm"];
+
+        //get each element by id
+        let inventoryItem = document.getElementById("itemName").value;
+        //or data.get('itemName')
+
+        //to target all data in the formData
+        let data = new FormData(inventoryForm);
+
+       // data.get(keyName);
+
+        let row = inventoryItems.insertRow();
+
+        row.insertCell().
+        innerHTML = data.get('itemName');
+
+        row.insertCell().
+        innerHTML = data.get('itemDescription');
+
+
+        row.insertCell().
+        innerHTML = data.get('itemAmount');
+
+
+        row.insertCell().
+        innerHTML = data.get('itemQuantity');
+
+
+        //iterate thru each form element
+        for (let [key, value] of data) {
+          console.log(key, value);
+        }
+
+        /*   for (let [key, value] of data) {
+            row.insertCell().
+        innerHTML = data.get('key');
+ */
+        console.log(data);
+      }
+
+      function applyTheme() {
+        //GET THE TABLE
+        let inventoryItem = document.getElementById("Inventory");
+
+        let selectedTheme = document.getElementById("themes");
+
+        console.log(selectedTheme.value);
+
+        //GET THE SELECTED THEME
+        if (selectedTheme.value == "Blue") {
+          inventoryItem.setAttribute("class", "blueTheme");
+        } else {
+          inventoryItem.setAttribute("class", "redTheme");
+        }
+      }
+    </script>
+  </body>
+</html>

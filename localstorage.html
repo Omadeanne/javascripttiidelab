@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    save
+    get what you saved 
+    replace(save)
+    delete
+
+    synthax
+    localStorage.setItem(Key,data)  //key is whatever you name it then data is what you're saving 
+    <script>
+        let firstName = "Kenny"
+        let lastName = " Salami"
+        let email = "kenny@gmail.com"
+        let phoneNumber ="22374578"
+
+        let person = [{
+            firstName :firstName,
+            lastName :lastName,
+            email:email,
+            phoneNumber:phoneNumber
+        },
+        {
+            firstName :firstName,
+            lastName :lastName,
+            email:email,
+            phoneNumber:phoneNumber
+        }
+        ,{
+            firstName :firstName,
+            lastName :lastName,
+            email:email,
+            phoneNumber:phoneNumber
+        }]
+        localStorage.setItem("user" , JSON.stringify(person)) //convert to string
+
+//get saved item
+//localStorage.getItem("key")
+
+let users = localStorage.getItem("user")
+users = JSON.parse(users) //convert it back to object
+//alert(users)
+
+
+//delete
+
+
+
+
+    </script>
+</body>
+</html>

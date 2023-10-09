@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statements</title>
+</head>
+<body>
+    <!-- 
+conditional statement
+2. switch statement
+        switch(key){
+        case value1:
+            action
+         break;
+
+        case value2:
+            action
+         break; 
+
+        default:
+          default action
+         break;
+    }
+     -->
+    <script>
+        //eg 1
+        /*
+switch(prompt("Where are you from?")){
+    case "chioma":
+        alert ("You are from the South East")
+       break;
+
+    case "Olawale":
+        alert("You're from the South West")
+        break;
+
+    case "Idris":
+        alert("You're from the North Central")
+        break;
+
+    default:
+        alert("Are you a Nigerian?")
+        break;
+
+
+}
+*/
+//example 2
+/*let age = prompt("How old are you");
+switch(true){
+        case age <= 20:
+            alert("You're a teenager")
+         break;
+
+        case age > 20 && age <= 50 :
+            alert("You're an Adult")
+         break; 
+
+        default:
+           alert("You're an old man")
+         break;
+    }
+*/
+
+/*
+const expr = 'Papayas';
+switch (expr) {
+case 'Oranges':
+console.log('Oranges are $0.59 a pound.');
+break;
+
+case 'Mangoes':
+case 'Papayas':
+console.log('Mangoes and papayas are $2.79 a pound.');
+// expected output: "Mangoes and papayas are $2.79 a pound."
+break;
+
+default:
+console.log(`Sorry, we are out of ${expr}.`);
+}
+*/
+
+
+switch (expr) {
+case 'Oranges':
+console.log('Oranges are $0.59 a pound.');
+break;
+case 'Apples':
+console.log('Apples are $0.32 a pound.');
+break;
+case 'Bananas':
+console.log('Bananas are $0.48 a pound.');
+break;
+case 'Cherries':
+console.log('Cherries are $3.00 a pound.');
+break;
+case 'Mangoes':
+case 'Papayas':
+console.log('Mangoes and papayas are $2.79 a pound.');
+break;
+default:
+console.log('Sorry, we are out of ' + expr + '.');
+console.log("Is there anything else you'd like?");
+
+}
+
+
+
+
+
+ </script>
+</body>
+</html>

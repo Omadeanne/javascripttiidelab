@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error handling try... catch</title>
+</head>
+<body>
+    <input id="age" placeholder="Enter your age" onchange="getAge()">
+    <script>
+        function getAge(){
+            try{
+
+               validateAge(age)
+            }
+            catch(e){
+                errorHandler(e)
+            }
+            alert(`error ${e}`)
+            
+            
+        }
+        
+        function validateAge(age){
+            
+        }
+        //check if its a reference error
+        if(e instanceof ReferenceError){
+            alert("This is a reference error ")
+        } else if(e instanceof EvalError){
+            
+        }
+        /*
+        reference 
+        synthax
+        type error
+        range
+        url
+        */
+    </script>
+</body>
+</html>

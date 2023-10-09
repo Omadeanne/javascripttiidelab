@@ -1,0 +1,70 @@
+<script>
+//  function multiplyNum(...values){
+//   let solution = 1;
+
+//     function processNum(){
+//         values.forEach(num=>{
+//             solution *= num 
+//         })
+//         return solution
+//     }
+// return processNum()
+    
+// }
+// console.log(multiplyNum(94,2,3,10,4,8,8,9))
+
+
+// //function calling itself  is a recurssion
+// function reoccuringNum (){
+//     let get = +(prompt("get a number between 1 and 50 "))
+//     if(get != 26){
+//         reoccuringNum()
+//     }
+//     else{alert("you got it!")}
+// }
+// reoccuringNum()
+
+
+//optional parameter
+//spread operator
+function sumNumbers(...numbers){
+    let result = 1
+    numbers.forEach(number =>{result += number})
+    return result;
+
+}
+console.log(sumNumbers(1,2,3,4,5,67,3))
+
+
+let array = [2,3,4,5]
+let array2 = [6,7,8,9]
+let array3 = [...array,...array2]
+console.log(array3)
+
+// function functionName(){
+//     let letter = (prompt("what's your favourite letter? "))
+//     if(typeof letter ==="string"){
+//         alert("Awesome")
+//     }else{
+//         alert("Input a letter")
+//     }
+// }
+// functionName()
+// console.log(typeof(letter))
+
+
+ //let letter; // Declare letter as a global variable
+
+// function functionName() {
+//   let letter = prompt("What's your favorite letter? ");
+//     if (typeof letter === "string") {
+//         alert("Awesome");
+//     } else {
+//         alert("Input a letter");
+//     }
+// }
+
+// functionName();
+// console.log(typeof letter); // Now you can access letter outside the function
+
+</script>
